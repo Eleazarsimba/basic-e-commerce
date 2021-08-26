@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Footer from './components/Dashboard/Footer/Footer';
+import Mainheader from './components/Dashboard/header/Mainheader';
+import Titlebar from './components/Dashboard/header/Titlebar';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Footer /> */}
+    {/* <Mainheader /> */}
+    <Titlebar />
   </React.StrictMode>,
   document.getElementById('root')
 );
