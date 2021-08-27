@@ -3,6 +3,7 @@ import {FaChevronRight} from 'react-icons/fa'
 import {RiFacebookCircleLine} from 'react-icons/ri'
 import {TiSocialTwitterCircular, TiSocialGooglePlusCircular, TiSocialInstagram, TiSocialLinkedinCircular} from 'react-icons/ti'
 import {FaCcPaypal, FaCcVisa, FaCcMastercard} from 'react-icons/fa'
+
 const Footer = () => {
     return (
         <div>

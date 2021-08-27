@@ -1,10 +1,11 @@
 import React from 'react'
 import image1 from '../../../images/image1.jpg';
 import {FiMenu} from 'react-icons/fi'
-import {MdEvent} from 'react-icons/md'
+import {MdEvent, MdAddShoppingCart} from 'react-icons/md'
 import {FcAbout} from 'react-icons/fc'
 import {AiFillShop} from 'react-icons/ai'
-import {GrServices} from 'react-icons/gr'
+import {FiPhoneCall} from 'react-icons/fi'
+import {GoMail} from 'react-icons/go'
 
 const Titlebar = () => {
     return (
@@ -21,7 +22,7 @@ const Titlebar = () => {
                     <li>Events</li>
                     <li>About us</li>
                     <li>Best deals</li>
-                    <li>Services</li>
+                    <li>New</li>
                 </ul>
             </div>
             <div className="myicons">
@@ -29,11 +30,27 @@ const Titlebar = () => {
                     <li><MdEvent color="black" size="20" /></li>
                     <li><FcAbout color="black" size="20" /></li>
                     <li><AiFillShop color="black" size="20" /></li>
-                    <li><GrServices color="black" size="20" /></li>
+                    <li><MdAddShoppingCart color="black" size="20" /></li>
                 </ul>
             </div>
             <div className="mymenuicon">
                 <FiMenu color="black" size="30"/>
+            </div>
+            <div className="telephonehere">
+                <FiPhoneCall color="#000000" size="20" /> 
+                <div className="getus">
+                    <a href="tel:0706083697">
+                        <span className="getus"> 0706083697</span>
+                    </a>
+                </div>
+            </div>
+            <div className="emailhere">
+                <GoMail color="#000000" size="20" className="addressin" /> 
+                <div className="getus">
+                    <a href="mailto: eleazarsimba5@gmail.com">
+                        eleazarsimba5@gmail.com
+                    </a>
+                </div>
             </div>
         </div>
     )

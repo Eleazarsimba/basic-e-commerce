@@ -1,10 +1,15 @@
 import './App.css';
+import React from "react";
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Webhome from './components/Body/Webhome';
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello</p>
-    </div>
+    <Router>
+      <Switch>
+          <Route exact path="/" component={Webhome} />
+      </Switch>
+  </Router>
   );
 }
 
