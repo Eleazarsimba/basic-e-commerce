@@ -277,6 +277,9 @@ code {
   display: flex;
   padding-left: 20px;
   padding-top: 7px;
+  width:100%;
+  z-index: 5050;
+  background-color: #ffffff;
 }
 .mylogo{
   width: 8%;;
@@ -323,7 +326,7 @@ code {
     display: flex;
   }
   .getus{
-    font-size: 11px;
+    font-size: 10px;
   }
   .getus a{
     text-decoration: none;
@@ -452,7 +455,7 @@ code {
 }
 .itemsmainbox{
   display: flex;
-  width: 100%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
@@ -502,7 +505,7 @@ code {
 /* about us */
 .aboutgrocery{
   height: auto;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   background-color: #A9A9A9;

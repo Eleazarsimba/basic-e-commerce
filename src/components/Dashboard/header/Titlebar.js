@@ -6,8 +6,20 @@ import {FcAbout} from 'react-icons/fc'
 import {AiFillShop} from 'react-icons/ai'
 import {FiPhoneCall} from 'react-icons/fi'
 import {GoMail} from 'react-icons/go'
+import $ from 'jquery';
 
 const Titlebar = () => {
+    $(window).scroll(function(e){ 
+        //this sets the navbar fixed on scroll
+        var $el = $('.titlebar'); 
+        var isPositionFixed = ($el.css('position') === 'fixed');
+        if ($(this).scrollTop() > 150 && !isPositionFixed){ 
+          $el.css({'position': 'fixed', 'top': '0px'}); 
+        }
+        if ($(this).scrollTop() < 150 && isPositionFixed){
+          $el.css({'position': 'static', 'top': '0px'}); 
+        } 
+      });
     return (
         <div className="titlebar">
             <div className="mylogo">
@@ -37,18 +49,16 @@ const Titlebar = () => {
                 <FiMenu color="black" size="30"/>
             </div>
             <div className="telephonehere">
-                <FiPhoneCall color="#000000" size="20" /> 
-                <div className="getus">
-                    <a href="tel:0706083697">
-                        <span className="getus"> 0706083697</span>
-                    </a>
-                </div>
+                <a href="tel:0706083697"> 
+                    <FiPhoneCall color="#000000" size="20" /> 
+                    <span className="getus">0706083697</span>
+                </a>
             </div>
             <div className="emailhere">
-                <GoMail color="#000000" size="20" className="addressin" /> 
-                <div className="getus">
+                <div>
                     <a href="mailto: eleazarsimba5@gmail.com">
-                        eleazarsimba5@gmail.com
+                        <GoMail color="#000000" size="20" className="addressin" /> 
+                        <span className="getus">eleazarsimba5@gmail.com</span>
                     </a>
                 </div>
             </div>
