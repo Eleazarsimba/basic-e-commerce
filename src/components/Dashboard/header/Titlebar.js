@@ -21,6 +21,7 @@ const Titlebar = () => {
         } 
       });
     return (
+        <div>
         <div className="titlebar">
             <div className="mylogo">
                 <img src={image1} alt="Logo" 
@@ -62,6 +63,7 @@ const Titlebar = () => {
                     </a>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

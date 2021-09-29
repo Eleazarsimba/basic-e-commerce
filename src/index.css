@@ -13,33 +13,38 @@ code {
 }
 /* footer at larger screen */
 @media only screen and (min-width: 580px) {
-.footerheader{
+#footerheader{
   background-color: #ff0000;
   display: flex;
   align-items: center;
   justify-content: center;
   height: auto;
 }
-.footerheader p{
+#footerheader p{
   color: #ffffff;
   font-size: 14px;
-  height: 24px;
   font-weight: 700;
+  padding-top: 10px;
 }
-.subscribebutton input{
+#subscribebutton input{
   background-color: #ff0000;
   color: #ffffff;
   border: 1px solid white;
-  height: 20px;
   margin-left: 10px;
 }
-.subscribebutton ::placeholder {
+#subscribebutton ::placeholder {
   color: #ffffff;
   opacity: 1; 
 }
-.subscribebutton button{
+#subscribebutton button{
   border: 1px solid white;
-  height: 24px;
+  background-color: #0000ff;
+  color: #ffffff;
+}
+#subscribebutton :hover{
+  border: 1px solid white;
+  background-color: #87CEEB;
+  color: #000000;
 }
 .footerbody{
   background-color: #000000;
@@ -100,7 +105,7 @@ code {
 
 /* footer at small screen */
 @media only screen and (max-width: 580px) {
-  .footerheader{
+  #footerheader{
     background-color: #ff0000;
     display: flex;
     flex-direction: column;
@@ -109,26 +114,31 @@ code {
     height: auto;
     padding-bottom: 5px;
   }
-  .footerheader p{
+  #footerheader p{
     color: #ffffff;
     font-size: 14px;
-    height: 24px;
     font-weight: 700;
+    padding-top: 5px;
   }
-  .subscribebutton input{
+  #subscribebutton input{
     background-color: #ff0000;
     color: #ffffff;
     border: 1px solid white;
-    height: 20px;
     margin-left: 10px;
   }
-  .subscribebutton ::placeholder {
+  #subscribebutton ::placeholder {
     color: #ffffff;
     opacity: 1; 
   }
-  .subscribebutton button{
+  #subscribebutton button{
     border: 1px solid white;
-    height: 24px;
+    background-color: #0000ff;
+    color: #ffffff;
+  }
+  #subscribebutton :hover{
+    border: 1px solid white;
+    background-color: #87CEEB;
+    color: #000000;
   }
   .footerbody{
     background-color: #000000;
@@ -193,14 +203,12 @@ code {
     background-color: #00ff00;
     width: 150px;
     border-top-left-radius: 10px;
-    height: 37px;
     padding-left: 10px;
   }
   .searchhere{
     z-index: 1;
     background-color: #000000;
     width: 100%;
-    height: 37px;
     padding-left: 10px;
     display: flex;
   }
@@ -209,13 +217,11 @@ code {
   .topheaderbar{
     background-color: #ffffff;
     display: flex;
-    height: 30px;
     font-size: 12px;
     color: #ffffff;
     font-weight: 600;
   }
   .searchhere input{
-    height: 30px;
     width: 200px;
   }
   .searchhere button{
@@ -238,7 +244,6 @@ code {
     background-color: #ff0000;
     width: 130px;
     border-top-right-radius: 10px;
-    height: 37px;
     padding-left: 10px;
   }
   .account{
@@ -249,7 +254,6 @@ code {
   .topheaderbar{
     background-color: #ffffff;
     display: flex;
-    height: 30px;
     font-size: 12px;
     color: #ffffff;
     font-weight: 600;
@@ -297,6 +301,7 @@ code {
 /* for larger screens above 730 */
 @media only screen and (min-width: 730px) {
   .mymenu{
+    padding-top: 15px;
     width: 50%;
   }
   .mymenu ul{
@@ -306,7 +311,8 @@ code {
     display: inline;
     padding-left: 6%;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
+    cursor: pointer;
   }
   .myicons ul li{
     display: none;
@@ -337,6 +343,7 @@ code {
 @media screen and (max-width: 730px) and (min-width:400px) {
   .myicons{
     width: 60%;
+    padding-top: 15px;
   }
   .mymenu ul li{
     display: none;
@@ -415,6 +422,15 @@ code {
   padding-left: 20px;
   border-bottom: 1px solid grey;
 }
+.menu3{
+ display: none;
+}
+.menu3 ul{
+  display: none;
+ }
+ .menu3 ul li{
+  display: none;
+ }
 .imagecover{
   width: 70%;
   margin: auto;
@@ -436,6 +452,24 @@ code {
   }
   .menu1 ul{
     display: none;
+  }
+  .menu3{
+    width: 20%;
+    min-width: 135px;
+    max-width: 200px;
+    height: auto;
+    background-color: #ffffff;
+  }
+  .menu3 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu3 ul li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid grey;
   }
   .imagecover{
     width: 90%;
@@ -587,4 +621,24 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+#mytable1{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#searcharea{
+  width: 30%;
+  max-width: 300px;
+  float: right;
+  margin-right: 5%;
+}
+#searchbutton{
+  width: 40px;
+}
+#paginationT2{
+  padding-left: 5%;
+}
+#paginationT2 li{
+  padding-left: 2px;
 }

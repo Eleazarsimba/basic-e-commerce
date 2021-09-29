@@ -1,18 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {FaChevronRight} from 'react-icons/fa'
 import {RiFacebookCircleLine} from 'react-icons/ri'
 import {TiSocialTwitterCircular, TiSocialGooglePlusCircular, TiSocialInstagram, TiSocialLinkedinCircular} from 'react-icons/ti'
 import {FaCcPaypal, FaCcVisa, FaCcMastercard} from 'react-icons/fa'
+import axios from 'axios'
+import { Form } from 'react-bootstrap';
 
 const Footer = () => {
+        const [data, setData] = useState({
+            email: "",
+        })
+        
+        const handleChange = (e) =>{
+            const newdata = { ...data }
+            newdata[e.target.id] = e.target.value
+            setData(newdata)
+        }
+        const subScribewithUs = (e) =>{
+        e.preventDefault()
+        axios.post('http://localhost:3001/theuser/register',{
+            //set new values
+            email: data.email,  
+        })
+        .then(function (response) {
+            // handle success
+            alert(response.data);
+            // setData(response.data.users)            
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error.response.data);
+            alert(error.response.data)
+        })
+    }
     return (
         <div>
-            <div className="footerheader">
+            <div id="footerheader">
                 <p>Sign Up For Our Newslettter</p>
-                <div className="subscribebutton">
-                    <input type="email" placeholder="Email" id="email"/>
-                    <button>SUBSCRIBE NOW</button>
-                </div>
+                <Form onSubmit={subScribewithUs}>
+                    <div id="subscribebutton">
+                        <input type="email" placeholder="Email" id="email" onChange={handleChange} required/>
+                        <button>SUBSCRIBE NOW</button>
+                    </div>
+                </Form>
             </div>
 
             <div className="footerbody">
